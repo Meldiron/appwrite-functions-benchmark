@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const httpServerEndpoint = "http://138.68.70.184:7777";
 
-module.exports = async function (req, res) {
+(async () => {
   let lastErr;
 
   let finished = false;
@@ -26,6 +26,10 @@ module.exports = async function (req, res) {
   if (lastErr) {
     throw lastErr;
   }
-
-  res.json({ success: true });
-};
+})()
+  .then(() => {
+    console.log(JSON.stringify({ success: true }));
+  })
+  .catch((err) => {
+    console.error(err);
+  });

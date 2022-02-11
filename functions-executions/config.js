@@ -1,7 +1,6 @@
 export const stressConfig = {
-  URL: "http://138.68.70.184/v1",
-  APISecret:
-    "6393a46b11511a0b2842cebd538771710c86088a3d2884eb8d3f75382c8bbe45613216c48b2d7b6229f01a21db4f017577aac60dc7c84ff73aa7479965dc9a62d85cc6f8d02e608a8d7837e98a39dc99af665f008233528c1005511f29c17535f60f04195f0b47ca7814449e93987664c1c530da559c2bc0f4b1530e75ea555a",
-  ProjectID: "dev",
-  functionID: "b6",
+  URL: "[YOUR_ENDPOINT]",
+  APISecret: "[YOUR_SECRET_KEY]",
+  ProjectID: "[YOUR_PROJECT_ID]",
+  functionID: "[YOUR_FUNCTION_ID]",
 };

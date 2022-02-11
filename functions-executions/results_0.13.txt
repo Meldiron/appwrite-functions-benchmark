@@ -1,0 +1,40 @@
+80$ DO droplet with 8GB ran and 4 CPUs. 10 VUS.
+
+In 10 seconds Appwrite handeled 3338 requests to create executions.
+Once it finished, I unfroze the first request. These 3338 executions finished in 34.469 seconds, resulting in 97 executions per second. Average execution took 2.5ms, so the delay created by Appwrite is 9ms per execution.
+
+---
+
+          /\      |‾‾| /‾‾/   /‾‾/   
+     /\  /  \     |  |/  /   /  /    
+    /  \/    \    |     (   /   ‾‾\  
+   /          \   |  |\  \ |  (‾)  | 
+  / __________ \  |__| \__\ \_____/ .io
+
+  execution: local
+     script: dumpsterTheServer.js
+     output: -
+
+  scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):
+           * default: 10 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (10.0s), 00/10 VUs, 3338 complete and 0 interrupted iterations
+default ✓ [======================================] 10 VUs  10s
+
+     data_received..................: 3.4 MB 342 kB/s
+     data_sent......................: 1.6 MB 160 kB/s
+     http_req_blocked...............: avg=6.61µs  min=1.33µs  med=2.85µs   max=4.53ms   p(90)=4.44µs  p(95)=5.77µs  
+     http_req_connecting............: avg=2.97µs  min=0s      med=0s       max=4.48ms   p(90)=0s      p(95)=0s      
+     http_req_duration..............: avg=29.84ms min=8.59ms  med=27.68ms  max=90.85ms  p(90)=44.75ms p(95)=50.54ms 
+       { expected_response:true }...: avg=29.84ms min=8.59ms  med=27.68ms  max=90.85ms  p(90)=44.75ms p(95)=50.54ms 
+     http_req_failed................: 0.00%  ✓ 0          ✗ 3338
+     http_req_receiving.............: avg=536.1µs min=36.32µs med=449.39µs max=10.43ms  p(90)=783µs   p(95)=984.59µs
+     http_req_sending...............: avg=26.38µs min=8.19µs  med=24.07µs  max=461.59µs p(90)=38.43µs p(95)=43.62µs 
+     http_req_tls_handshaking.......: avg=0s      min=0s      med=0s       max=0s       p(90)=0s      p(95)=0s      
+     http_req_waiting...............: avg=29.28ms min=8.28ms  med=27.18ms  max=90.39ms  p(90)=44.24ms p(95)=50.1ms  
+     http_reqs......................: 3338   332.867364/s
+     iteration_duration.............: avg=29.99ms min=8.87ms  med=27.82ms  max=91.03ms  p(90)=44.89ms p(95)=50.71ms 
+     iterations.....................: 3338   332.867364/s
+     vus............................: 10     min=10       max=10
+     vus_max........................: 10     min=10       max=10
