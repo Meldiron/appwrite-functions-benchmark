@@ -1,0 +1,1 @@
+tar --exclude='./node_modules' -zcvf ../appwrite-function.tar.gz .
