@@ -1,1 +1,1 @@
-deno compile server.ts
+deno compile -o ../http-server-bin --allow-net server.ts

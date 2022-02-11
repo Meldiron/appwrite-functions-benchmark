@@ -1,1 +1,1 @@
-k6 run --vus 10 --duration 30 dumpsterTheServer.js
+k6 run --vus 10 --duration 30s dumpsterTheServer.js
